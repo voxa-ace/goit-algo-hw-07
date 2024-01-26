@@ -45,7 +45,7 @@ def min_value_node(node):
     current = node
     while current.left:
         current = current.left
-    return current
+    return current.val
 
 # Creating a tree root and adding multiple nodes
 root = Node(10)
@@ -56,5 +56,5 @@ root = insert(root, 12)
 root = insert(root, 18)
 
 # Calling a function to find the smallest value
-min_node = min_value_node(root)
-print("Smallest value in the tree:", min_node.val)
+min_value = min_value_node(root)
+print("Smallest value in the tree:", min_value)
