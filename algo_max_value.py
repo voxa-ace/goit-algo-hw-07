@@ -34,18 +34,18 @@ def insert(root, key):
 
 def max_value_node(node):
     """
-    Function for finding the node with the highest value in the Binary Search Tree.
+    Function for finding the highest value in the Binary Search Tree.
 
     Parameters:
-    node: the node where the search starts.
+    node (Node): The node where the search starts.
 
     Returns:
-    Node: the node with the highest value in the tree.
+    int: The highest value in the tree.
     """
     current = node
     while current.right:
         current = current.right
-    return current
+    return current.val
 
 # Creating a tree root and adding multiple nodes
 root = Node(10)
@@ -56,5 +56,5 @@ root = insert(root, 12)
 root = insert(root, 18)
 
 # Calling a function to find the smallest value
-min_node = max_value_node(root)
-print("Highest value in the tree:", min_node.val)
+max_value = max_value_node(root)
+print("Highest value in the tree:", max_value)
